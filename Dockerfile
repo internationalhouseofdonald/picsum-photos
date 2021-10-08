@@ -27,7 +27,7 @@ WORKDIR /picsum-photos
 RUN npm install && npm run-script build
 
 # Third stage with only the things needed for the app to run
-FROM alpine:3.9
+FROM alpine:3.11.12
 
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing vips ca-certificates
 
